@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Alit — Torah Learning for Women</title>
-<meta name="description" content="Alit, the women’s learning center of Midrash Elyon. Discover Alit, our weekly Torah learning program, and register for classes.">
+<title>עלית — Torah Learning for Women</title>
+<meta name="description" content="עלית, the women’s learning center of Midrash Elyon. Discover עלית, our weekly Torah learning program, and register for classes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -368,7 +368,7 @@
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 
-  /* Alit's identity, drawn from the supplied announcement. */
+  /* עלית's identity, drawn from the supplied announcement. */
   :root[data-theme="light"] {
     --sage: #748252; --sage-deep: #536238; --sage-tint: #e9e9dc;
     --ivory: #f4efe3; --ivory-deep: #e9e1ce; --white: #fbf7ee;
@@ -410,6 +410,17 @@
 
   /* Spam trap: real people never see this box; automated form-fillers do. */
   .hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  .hero-pronunciation { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 500; line-height: 1.3; margin: 0 0 18px; color: var(--accent-deep); }
+  .hero-origin { font-size: clamp(1.25rem, 3.5vw, 1.65rem); line-height: 1.6; margin: 0 0 4px; }
+  .hero-translation { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; line-height: 1.5; margin: 0 0 28px; color: var(--text-soft); }
+  .coming-soon-frame { box-sizing: border-box; margin: 40px auto 0; padding: 30px 28px; background: #e9ddbd; border: 1px solid #b6a06b; border-left: 5px solid #947b42; border-radius: 4px; text-align: center; }
+  .coming-soon-frame h2 { margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 600; line-height: 1.3; color: #493d29; }
+  @media (max-width: 720px) { .coming-soon-frame { width: calc(100% - 32px); padding: 24px 20px; } }
+  @media (max-width: 720px) {
+    .class-row .description-teacher { font-weight: 700; color: var(--text); }
+    .class-row .teacher { display: none; }
+  }
+  .hero h1.hero-brand { font-size: clamp(4.5rem, 15vw, 8rem); line-height: 1.15; }
 </style>
 </head>
 <body>
@@ -417,7 +428,7 @@
 <header class="nav">
   <div class="nav-row">
     <a class="brandmark" href="#top">
-      <span class="heb">Alit</span>
+      <span class="heb" lang="he" dir="rtl">עלית</span>
     </a>
     <nav class="nav-links">
       <a href="#program">The Program</a>
@@ -434,9 +445,11 @@
   <section class="hero">
     <div class="wrap">
       <img class="hero-tree" src="assets/rachels-tree.jpg" alt="A flowering tree with a butterfly" width="670" height="515">
-      <h1 class="hero-brand">Alit</h1>
-      <p class="hero-dedication"><span>Dedicated in memory of</span> <span>Rachel Haber Cohen A&quot;H</span></p>
-      <div class="hero-en">The Women’s Learning Center of Midrash Elyon</div>
+      <h1 class="hero-brand" lang="he" dir="rtl">עלית</h1>
+      <h2 class="hero-pronunciation">[a-leet]</h2>
+      <p class="hero-origin" lang="he" dir="rtl"><em>את עלית על כולנה</em> (משלי לא, כט)</p>
+      <p class="hero-translation"><em>You are elevated above them all</em></p>
+      <div class="hero-en">The Women’s Learning Program of Midrash Elyon</div>
       <div class="hero-badge">Registration now open — Semester 1</div>
       <div class="hero-line"></div>
       <h2 class="hero-heading">The Next Chapter of Growth for the Women of Midrash Elyon</h2>
@@ -448,16 +461,18 @@
     </div>
   </section>
 
+  <aside class="coming-soon-frame wrap" aria-label="Coming soon">
+    <h2>Coming Soon: Unveiling Our All New Women's Learning Center</h2>
+  </aside>
+
   <!-- ABOUT -->
   <section id="program">
     <div class="wrap about-grid">
       <div class="about-copy">
         <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">The Program</span></div>
-        <h2 class="program-intro">Introducing <span lang="he" dir="rtl">עלית</span> <span class="pronunciation">[a-leet]</span></h2>
-        <p class="program-quote" lang="he" dir="rtl"><em>את עלית על כולנה</em> (משלי לא, כט)</p>
-        <p class="program-translation"><em>You are elevated above them all</em></p>
+        <h2 class="program-intro">Introducing <span lang="he" dir="rtl">עלית</span></h2>
         <p class="program-subtitle">Learning, at the pace of real life</p>
-        <p>Rooted in Torah, Alit is a learning program built for those who are reaching higher, who care about their growth and want to build a special future. There’s going through life, and then there’s owning that life. Join and see the difference.</p>
+        <p>Rooted in Torah, עלית is a learning program built for those who are reaching higher, who care about their growth and want to build a special future. There’s going through life, and then there’s owning that life. Join and see the difference.</p>
       </div>
       <div class="about-card">
         <div class="about-stat">
@@ -491,27 +506,27 @@
       <div class="class-list">
         <div class="class-row">
           <div class="idx">01</div>
-          <div class="name"><h3>HOME</h3><p>our epicenter, the place where we build our marriage and our family; navigated by the venerated Mrs Molly Haber</p></div>
-          <div class="teacher"><strong>Mrs. Molly Haber</strong></div>
+          <div class="name"><h3>LIFE</h3><p>so much in it, so much to understand, so much to do; simplified and highlighted by <span class="description-teacher">Rabbi David Haber</span></p></div>
+          <div class="teacher"><strong>Rabbi David Haber</strong></div>
           <div class="when">Mondays<br>12:45 – 1:45 PM</div>
         </div>
         <div class="class-row">
           <div class="idx">02</div>
-          <div class="name"><h3>MY SHABBAT</h3><p>the source of all blessing-Shabbat; the laws explained, and taught with practicality by Mrs Samantha Sasson</p></div>
+          <div class="name"><h3>MY SHABBAT</h3><p>the source of all blessing-Shabbat; the laws explained, and taught with practicality by <span class="description-teacher">Mrs Samantha Sasson</span></p></div>
           <div class="teacher"><strong>Mrs. Samantha Sasson</strong></div>
-          <div class="when">Tuesdays<br>1:00 – 2:00 PM</div>
+          <div class="when">Tuesdays<br>1:15 – 2:15 PM</div>
         </div>
         <div class="class-row">
           <div class="idx">03</div>
-          <div class="name"><h3>MOMMY</h3><p>the greatest responsibility in the world; nurtured and guided with expertise by Mrs Rivka Tebele</p></div>
-          <div class="teacher"><strong>Mrs. Rivka Tebele</strong></div>
-          <div class="when">Wednesdays<br>12:45 – 1:45 PM</div>
+          <div class="name"><h3>HOME</h3><p>our epicenter, the place where we build our marriage and our family; navigated by the venerated <span class="description-teacher">Mrs Molly Haber</span></p></div>
+          <div class="teacher"><strong>Mrs. Molly Haber</strong></div>
+          <div class="when">Wednesdays<br>12:15 – 1:15 PM</div>
         </div>
         <div class="class-row">
           <div class="idx">04</div>
-          <div class="name"><h3>LIFE</h3><p>so much in it, so much to understand, so much to do; simplified and highlighted by Rabbi David Haber</p></div>
-          <div class="teacher"><strong>Rabbi David Haber</strong></div>
-          <div class="when">Wednesdays<br>1:45 – 2:45 PM</div>
+          <div class="name"><h3>MOMMY</h3><p>the greatest responsibility in the world; nurtured and guided with expertise by <span class="description-teacher">Mrs Rivka Tebele</span></p></div>
+          <div class="teacher"><strong>Mrs. Rivka Tebele</strong></div>
+          <div class="when">Wednesdays<br>1:30 – 2:15 PM</div>
         </div>
       </div>
     </div>
@@ -604,19 +619,11 @@
           </fieldset>
 
           <fieldset>
-            <legend>Choose your classes</legend>
-            <div class="field" style="max-width: 360px;">
-              <label for="classCount">How many classes would you like to attend?</label>
-              <select id="classCount" name="classCount" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="2">2 classes</option>
-                <option value="3">3 classes</option>
-                <option value="4">4 classes</option>
-              </select>
-            </div>
+            <legend style="margin-bottom:8px;">Choose your classes</legend>
+            <input type="hidden" id="classCount" name="classCount" value="2">
 
-            <div class="conditional" id="rankSection">
-              <p class="hint" style="margin-top: 2px;">Choose your classes, in order of priority — your top choice first.</p>
+            <div class="conditional" id="rankSection" style="margin-top:0; padding-top:0;">
+              <p class="hint" style="margin-top: 2px;">Choose your classes, in order of priority — your top choice first. Minimum 2 classes.</p>
               <div id="rankFields"></div>
 
               <div class="conditional" id="backupSection">
@@ -627,6 +634,11 @@
               <p class="hint" id="autoBackupNote" style="display:none; margin-top: 18px;"></p>
 
               <div class="fee-note" id="feeNote" style="margin-top: 18px;"></div>
+            </div>
+
+            <div class="field" style="margin-top:22px;">
+              <label for="classComments">Comments (optional)</label>
+              <textarea id="classComments" name="classComments" rows="4" placeholder="Share any comments about your class choices or schedule."></textarea>
             </div>
 
             <p class="hint">All classes are subject to availability.</p>
@@ -749,8 +761,7 @@
 </main>
 
 <footer>
-  <div class="heb">Alit</div>
-  <p>Dedicated in memory of Rachel Haber Cohen A&quot;H</p>
+  <div class="heb" lang="he" dir="rtl">עלית</div>
   <p id="contactLine">Questions about registration? We're happy to help — reach out any time.</p>
 </footer>
 
@@ -771,7 +782,7 @@
   const REDIRECT_SECONDS = 12;
   // ======================================================================================================
 
-  console.info('Rachel’s Place form loaded. Registrations will be sent to: ' + String(SHEET_URL).slice(0, 70) + '…');
+  console.info('עלית form loaded. Registrations will be sent to: ' + String(SHEET_URL).slice(0, 70) + '…');
 
   const form = document.getElementById('regForm');
   const classCount = document.getElementById('classCount');
@@ -796,10 +807,10 @@
   const feeNote = document.getElementById('feeNote');
 
   const CLASSES = [
-    { value: 'Home',    label: 'Home — Mon, 12:45–1:45 PM · Mrs. Haber' },
-    { value: 'MY SHABBAT', label: 'MY SHABBAT — Tue, 1:00–2:00 PM · Mrs. Sasson' },
-    { value: 'Mommy',   label: 'Mommy — Wed, 12:45–1:45 PM · Mrs. Rivka Tebele' },
-    { value: 'Life',    label: 'Life — Wed, 1:45–2:45 PM · Rabbi Haber' }
+    { value: 'Life',    label: 'Life — Mon, 12:45–1:45 PM · Rabbi Haber' },
+    { value: 'MY SHABBAT', label: 'My Shabbat — Tue, 1:15–2:15 PM · Mrs. Sasson' },
+    { value: 'Home',    label: 'Home — Wed, 12:15–1:15 PM · Mrs. Haber' },
+    { value: 'Mommy',   label: 'Mommy — Wed, 1:30–2:15 PM · Mrs. Rivka Tebele' }
   ];
   const ORDINALS = ['', '1st', '2nd', '3rd', '4th'];
 
@@ -1055,6 +1066,8 @@
 
   let sending = false;
 
+  classCount.dispatchEvent(new Event('change'));
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
     if (sending) return;
@@ -1150,6 +1163,7 @@
       birthday: birthday,
       classes: classes.map((c, i) => (i + 1) + '. ' + c).join(', '),
       backupClasses: backupText,
+      comments: form.classComments.value.trim(),
       registrationFee: registrationFee,
       dedicationAmount: dedicationAmount,
       totalAmount: totalAmount,
