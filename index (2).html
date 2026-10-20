@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>עלית — Torah Learning for Women</title>
+<meta name="description" content="עלית, the women’s learning center of Midrash Elyon. Discover עלית, our weekly Torah learning program, and register for classes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --sage:        #7C8A5E;
+    --sage-deep:    #5B6944;
+    --sage-tint:    #E7E6D6;
+    --blush:        #D9C9A6;
+    --blush-tint:   #EFE7D2;
+    --ivory:        #EFE7D6;
+    --ivory-deep:   #E6DCC4;
+    --ink:          #332D21;
+    --ink-soft:     #5F5745;
+    --gold:         #A6894F;
+    --line:         #D9CDAE;
+    --white:        #F8F3E6;
+
+    --bg: var(--ivory);
+    --bg-panel: var(--white);
+    --bg-tint: var(--sage-tint);
+    --text: var(--ink);
+    --text-soft: var(--ink-soft);
+    --accent: var(--sage);
+    --accent-deep: var(--sage-deep);
+    --line-color: var(--line);
+    --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #211F1A;
+      --bg-panel: #2A2721;
+      --bg-tint: #302C24;
+      --text: #EFE9DC;
+      --text-soft: #C7BFAE;
+      --accent: #9CAB86;
+      --accent-deep: #B7C4A4;
+      --line-color: #454033;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #211F1A;
+    --bg-panel: #2A2721;
+    --bg-tint: #302C24;
+    --text: #EFE9DC;
+    --text-soft: #C7BFAE;
+    --accent: #9CAB86;
+    --accent-deep: #B7C4A4;
+    --line-color: #454033;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(84px + env(safe-area-inset-top, 0px)); }
+  html, body { height: auto; }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    background-image: var(--paper-texture);
+    background-blend-mode: multiply;
+    color: var(--text);
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { max-width: 100%; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--text); margin: 0; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  .tone-tint { background: color-mix(in srgb, var(--sage) 11%, transparent); }
+  .scrollx { overflow-x: auto; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 40;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line-color);
+  }
+  .nav-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px; max-width: 1080px; margin: 0 auto;
+  }
+  .brandmark { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+  .brandmark .heb { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--accent-deep); letter-spacing: 0.02em; }
+  .brandmark .sub { font-size: 0.66rem; color: var(--gold); letter-spacing: 0.14em; }
+  .nav-links { display: flex; gap: 30px; font-size: 0.92rem; }
+  .nav-links a { text-decoration: none; color: var(--text-soft); border-bottom: 1px solid transparent; padding-bottom: 3px; transition: color .2s, border-color .2s; }
+  .nav-links a:hover { color: var(--accent-deep); border-color: var(--accent-deep); }
+  .nav-cta {
+    background: var(--accent); color: var(--ivory); text-decoration: none;
+    padding: 9px 20px; border-radius: 3px; font-size: 0.9rem; white-space: nowrap;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--accent-deep); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(120% 90% at 85% -10%, color-mix(in srgb, var(--gold) 20%, transparent), transparent 60%),
+      linear-gradient(180deg, var(--bg-tint), var(--bg) 78%);
+    padding: 96px 0 88px;
+    text-align: center;
+  }
+  .hero .branch {
+    position: absolute; opacity: 0.5; pointer-events: none;
+  }
+  .hero .branch.left  { left: -60px; top: 40px; width: 220px; transform: scaleX(-1) rotate(8deg); }
+  .hero .branch.right { right: -60px; bottom: 10px; width: 220px; rotate: -6deg; }
+  .hero-heb {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.6rem, 11vw, 6.4rem);
+    font-weight: 700;
+    color: var(--accent-deep);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .hero-en {
+    font-size: clamp(1rem, 2.4vw, 1.3rem);
+    letter-spacing: 0.09em;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--accent-deep);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 20px;
+    padding: 6px 16px;
+    margin-bottom: 26px;
+  }
+  .hero-line {
+    width: 54px; height: 1px; background: var(--gold);
+    margin: 0 auto 26px;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    max-width: 620px; margin: 0 auto 18px;
+    font-weight: 500;
+  }
+  .hero p.lede {
+    max-width: 520px; margin: 0 auto 34px; color: var(--text-soft);
+    font-size: 1.14rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; text-decoration: none; cursor: pointer; border: none;
+    font-family: 'Assistant', sans-serif; font-size: 0.98rem; font-weight: 600;
+    padding: 14px 30px; border-radius: 3px; transition: transform .15s ease, background .2s, box-shadow .2s;
+  }
+  .btn-primary { background: var(--accent); color: var(--ivory); }
+  .btn-primary:hover { background: var(--accent-deep); transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: .65; cursor: wait; transform: none; }
+  .btn-ghost { background: transparent; color: var(--accent-deep); border: 1px solid var(--line-color); }
+  .btn-ghost:hover { border-color: var(--accent-deep); }
+
+  /* ---------- SECTION generic ---------- */
+  section { padding: 84px 0; }
+  .eyebrow-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .eyebrow-row .stem { width: 30px; height: 1px; background: var(--gold); }
+  .eyebrow { color: var(--gold); font-size: 0.86rem; }
+  .section-head { max-width: 620px; margin-bottom: 48px; }
+  .section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 500; margin-bottom: 14px; }
+  .section-head p { color: var(--text-soft); font-size: 1.03rem; max-width: 540px; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+  .about-copy p { color: var(--text-soft); margin: 0 0 16px; font-size: 1.03rem; }
+  .about-card {
+    background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 4px;
+    padding: 32px; display: grid; gap: 22px;
+  }
+  .about-stat { display: flex; gap: 16px; align-items: flex-start; }
+  .about-stat .leaf { flex-shrink: 0; width: 26px; height: 26px; color: var(--accent); }
+  .about-stat h3 { font-size: 1.08rem; font-weight: 600; margin-bottom: 4px; }
+  .about-stat p { margin: 0; color: var(--text-soft); font-size: 0.93rem; }
+  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- CLASSES ---------- */
+  .class-list { display: flex; flex-direction: column; border-top: 1px solid var(--line-color); }
+  .class-row {
+    display: grid; grid-template-columns: 90px 1.4fr 1fr auto; gap: 24px; align-items: center;
+    padding: 28px 4px; border-bottom: 1px solid var(--line-color);
+  }
+  .class-row .idx { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--line-color); font-weight: 600; }
+  .class-row .name h3 { font-size: 1.34rem; font-weight: 600; margin-bottom: 5px; }
+  .class-row .name p { margin: 0; color: var(--text-soft); font-size: 0.94rem; }
+  .class-row .teacher { font-size: 0.94rem; color: var(--text-soft); }
+  .class-row .teacher strong { display: block; color: var(--text); font-weight: 600; font-size: 0.98rem; margin-bottom: 3px; }
+  .class-row .when { text-align: right; font-size: 0.9rem; color: var(--accent-deep); font-weight: 600; white-space: nowrap; }
+  @media (max-width: 720px) {
+    .class-row { grid-template-columns: 44px 1fr; row-gap: 6px; }
+    .class-row .teacher, .class-row .when { grid-column: 2; text-align: left; }
+  }
+
+  /* ---------- SEMESTERS ---------- */
+  .semester-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 44px; }
+  .semester-card {
+    background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 4px;
+    padding: 32px; text-align: center;
+  }
+  .semester-card h3 { font-size: 1.5rem; font-weight: 600; margin: 6px 0 4px; }
+  .semester-card .sem-meta { color: var(--text-soft); font-size: 0.95rem; margin: 0; }
+  .sem-badge {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 0.05em;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 4px;
+    background: var(--bg-tint); color: var(--text-soft); border: 1px solid var(--line-color);
+  }
+  .sem-badge.open { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-deep); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+  .semester-card.disabled {
+    filter: grayscale(1);
+    opacity: 0.6;
+    background: var(--bg-tint);
+  }
+  @media (max-width: 720px) { .semester-grid { grid-template-columns: 1fr; } }
+
+  .yomiyun-card {
+    background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 4px;
+    padding: 34px 36px;
+  }
+  .yomiyun-card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; }
+  .yomiyun-card .yi-sub { color: var(--text-soft); margin: 0 0 14px; }
+  .yi-list { margin: 0; padding-left: 20px; color: var(--text-soft); display: grid; gap: 7px; }
+  .yi-list li { font-size: 0.98rem; }
+  .yi-list li::marker { color: var(--gold); }
+
+  /* ---------- PRICING ---------- */
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .price-card {
+    background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 4px;
+    padding: 36px 32px; position: relative;
+  }
+  .price-card.featured { border-color: var(--accent); }
+  .price-card .tag {
+    position: absolute; top: -12px; right: 28px; background: var(--accent); color: var(--ivory);
+    font-size: 0.74rem; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 3px;
+  }
+  .price-card h3 { font-size: 1.28rem; font-weight: 600; margin-bottom: 8px; }
+  .price-card .desc { color: var(--text-soft); font-size: 0.94rem; margin-bottom: 22px; }
+  .price-card .amounts { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
+  .price-line { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--line-color); }
+  .price-line:first-child { border-top: none; }
+  .price-line .num { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--accent-deep); }
+  .price-line .label { color: var(--text-soft); font-size: 0.92rem; }
+  .price-note { font-size: 0.82rem; color: var(--text-soft); margin-top: 18px; }
+  @media (max-width: 720px) { .price-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- REGISTER FORM ---------- */
+  .form-shell {
+    background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 6px;
+    padding: 44px; 
+  }
+  @media (max-width: 640px) { .form-shell { padding: 26px 20px; } }
+  fieldset { border: none; margin: 0 0 40px; padding: 0; }
+  fieldset:last-of-type { margin-bottom: 0; }
+  legend {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600;
+    padding: 0 0 6px; margin-bottom: 20px; border-bottom: 1px solid var(--line-color); width: 100%; color: var(--text);
+  }
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+  .field label { font-size: 0.88rem; color: var(--text-soft); }
+  .field input[type="text"], .field input[type="email"], .field input[type="tel"], .field input[type="date"], .field select {
+    font-family: 'Assistant', sans-serif; font-size: 1rem; padding: 11px 13px;
+    border: 1px solid var(--line-color); border-radius: 3px; background: var(--bg);
+    color: var(--text); width: 100%;
+  }
+  .field select { appearance: auto; cursor: pointer; }
+  .field input:focus, .radio-pill input:focus-visible + span, .class-check input:focus-visible + .cc-box {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+  }
+  .hint { font-size: 0.8rem; color: var(--text-soft); margin-top: -8px; margin-bottom: 18px; }
+  .hint.warn { color: var(--gold); }
+
+  .class-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 6px; }
+  .class-check { display: block; cursor: pointer; }
+  .class-check input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .cc-box {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    border: 1px solid var(--line-color); border-radius: 4px; padding: 15px 16px;
+    transition: border-color .15s, background .15s;
+  }
+  .class-check input:checked + .cc-box {
+    border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, transparent);
+  }
+  .cc-box .cc-name { font-weight: 600; font-size: 1rem; }
+  .cc-box .cc-when { font-size: 0.8rem; color: var(--text-soft); }
+  .cc-box .cc-mark {
+    width: 18px; height: 18px; border: 1px solid var(--line-color); border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .class-check input:checked + .cc-box .cc-mark { background: var(--accent); border-color: var(--accent); }
+  .class-check input:checked + .cc-box .cc-mark::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--ivory); }
+  @media (max-width: 640px) { .class-check-grid, .field-grid { grid-template-columns: 1fr; } }
+
+  .radio-pill-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .radio-pill { cursor: pointer; }
+  .radio-pill input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .radio-pill span {
+    display: inline-block; padding: 10px 20px; border: 1px solid var(--line-color); border-radius: 20px;
+    font-size: 0.92rem; color: var(--text-soft); transition: all .15s;
+  }
+  .radio-pill input:checked + span { background: var(--accent); border-color: var(--accent); color: var(--ivory); }
+
+  .conditional { display: none; margin-top: 18px; padding-top: 4px; }
+  .conditional.show { display: block; }
+
+  .plan-options { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .plan-opt { border: 1px solid var(--line-color); border-radius: 4px; padding: 18px 20px; cursor: pointer; display: block; }
+  .plan-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .plan-opt .po-title { font-weight: 600; margin-bottom: 3px; }
+  .plan-opt .po-sub { font-size: 0.85rem; color: var(--text-soft); }
+  .plan-opt:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+  @media (max-width: 860px) { .plan-options { grid-template-columns: 1fr; } }
+
+  .summary-box {
+    background: var(--bg-tint); border: 1px solid var(--line-color); border-radius: 4px;
+    padding: 20px 22px; margin-top: 6px; font-size: 0.95rem; color: var(--text-soft);
+  }
+  .summary-box strong { color: var(--text); }
+
+  .fee-note {
+    background: color-mix(in srgb, var(--accent) 9%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    border-radius: 4px; padding: 14px 18px; font-size: 0.92rem; color: var(--text);
+  }
+  .fee-note strong { color: var(--accent-deep); }
+
+  .submit-row { display: flex; align-items: center; gap: 18px; margin-top: 8px; flex-wrap: wrap; }
+  .error-msg { color: #A24A3E; font-size: 0.88rem; }
+
+  /* confirmation */
+  .confirm { text-align: center; padding: 30px 10px; }
+  .confirm .leaf-big { width: 48px; height: 48px; color: var(--accent); margin-bottom: 18px; }
+  .confirm h3 { font-size: 1.7rem; margin-bottom: 10px; }
+  .confirm p { color: var(--text-soft); max-width: 420px; margin: 0 auto 22px; }
+  .confirm .receipt {
+    text-align: left; max-width: 420px; margin: 0 auto 26px; border-top: 1px solid var(--line-color); padding-top: 18px;
+  }
+  .confirm .receipt div { display: flex; justify-content: space-between; padding: 7px 0; font-size: 0.92rem; border-bottom: 1px solid var(--line-color); }
+  .confirm .receipt div span:first-child { color: var(--text-soft); }
+
+  /* footer */
+  footer { border-top: 1px solid var(--line-color); padding: 44px 0; text-align: center; }
+  footer .heb { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--accent-deep); margin-bottom: 6px; }
+  footer p { color: var(--text-soft); font-size: 0.85rem; margin: 4px 0; }
+
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+
+  /* עלית's identity, drawn from the supplied announcement. */
+  :root[data-theme="light"] {
+    --sage: #748252; --sage-deep: #536238; --sage-tint: #e9e9dc;
+    --ivory: #f4efe3; --ivory-deep: #e9e1ce; --white: #fbf7ee;
+    --ink: #3b3428; --ink-soft: #645e4e; --gold: #77795d; --line: #d8d3bd;
+  }
+  .brandmark .heb { font-size: clamp(1.25rem, 3.8vw, 1.7rem); font-weight: 600; letter-spacing: .055em; text-transform: uppercase; }
+  .hero { padding: 34px 0 66px; background: var(--bg); }
+  .hero-tree { display: block; width: min(100%, 330px); height: auto; margin: 0 auto 12px; mix-blend-mode: multiply; }
+  .hero-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 20px; color: var(--text); }
+  .hero h1.hero-brand { max-width: 100%; font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 7.5vw, 5.3rem); line-height: 1.08; font-weight: 500; letter-spacing: .055em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .hero-dedication { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2.8vw, 1.5rem); font-style: italic; margin: 0 auto 26px; }
+  .hero-en { font-size: .875rem; letter-spacing: .14em; text-transform: uppercase; line-height: 1.7; margin-bottom: 22px; }
+  .hero-heading { font-size: clamp(1.6rem, 3.8vw, 2.35rem); max-width: 650px; margin: 0 auto 16px; font-weight: 500; line-height: 1.2; }
+  .program-subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem !important; font-style: italic; color: var(--accent-deep) !important; }
+  footer .heb { text-transform: uppercase; letter-spacing: .06em; }
+  .hero-badge { font-size: .875rem; }
+  @media (max-width: 480px) { .nav-row { padding: 12px 16px; gap: 12px; } .hero { padding-top: 26px; } .hero-tree { width: 250px; } }
+
+  .program-intro { font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 12px; font-weight: 500; color: var(--accent-deep); }
+  .program-intro .pronunciation { white-space: nowrap; }
+  .about-copy .program-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.5; text-align: left; margin-bottom: 22px; color: var(--text); }
+  .yomiyun-card { background: #e9ddbd; border-color: #b6a06b; border-left: 5px solid #947b42; }
+  .yomiyun-card .eyebrow { font-size: clamp(1.4rem, 3.5vw, 1.8rem); font-weight: 700; letter-spacing: .08em; color: #64522e; }
+  .yomiyun-card .stem { background: #947b42; }
+  .yomiyun-card h3 { color: #493d29; }
+  .yomiyun-card .yi-sub, .yomiyun-card li { color: #60543d; }
+  .yomiyun-card + .yomiyun-card { margin-top: 18px; }   /* space between stacked event cards */
+  @media (max-width: 720px) {
+    .hero-dedication span { display: block; }
+    .hero-dedication { line-height: 1.5; }
+  }
+  .program-intro span[lang="he"] { display: inline-block; font-size: 1.5em; line-height: 1.25; font-weight: 600; }
+  .about-copy .program-quote { margin-bottom: 4px; }
+  .about-copy .program-translation { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; line-height: 1.5; color: var(--text-soft); margin-bottom: 22px; }
+  textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; line-height: 1.5; color: var(--text); background: var(--bg); border: 1px solid var(--line-color); border-radius: 3px; padding: 12px 14px; resize: vertical; }
+  textarea:focus { outline: 2px solid var(--accent-deep); outline-offset: 2px; }
+  .confirm .receipt div span:last-child { overflow-wrap: anywhere; }
+  .about-stat h3.lunch-heading, .about-stat h3.lunch-heading strong { font-family: 'Assistant', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--text); }
+
+  /* Spam trap: real people never see this box; automated form-fillers do. */
+  .hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  .hero-pronunciation { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 500; line-height: 1.3; margin: 0 0 18px; color: var(--accent-deep); }
+  .hero-origin { font-size: clamp(1.25rem, 3.5vw, 1.65rem); line-height: 1.6; margin: 0 0 4px; }
+  .hero-translation { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; line-height: 1.5; margin: 0 0 28px; color: var(--text-soft); }
+  .coming-soon-frame { box-sizing: border-box; margin: 40px auto 0; padding: 30px 28px; background: #e9ddbd; border: 1px solid #b6a06b; border-left: 5px solid #947b42; border-radius: 4px; text-align: center; }
+  .coming-soon-frame h2 { margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 600; line-height: 1.3; color: #493d29; }
+  @media (max-width: 720px) { .coming-soon-frame { width: calc(100% - 32px); padding: 24px 20px; } }
+  @media (max-width: 720px) {
+    .class-row .description-teacher { font-weight: 700; color: var(--text); }
+    .class-row .teacher { display: none; }
+  }
+  .hero h1.hero-brand { font-size: clamp(4.5rem, 15vw, 8rem); line-height: 1.15; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-row">
+    <a class="brandmark" href="#top">
+      <span class="heb" lang="he" dir="rtl">עלית</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#program">The Program</a>
+      <a href="#classes">Classes</a>
+      <a href="#schedule">Schedule</a>
+    </nav>
+    <a class="nav-cta" href="#register">Register</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-tree" src="assets/rachels-tree.jpg" alt="A flowering tree with a butterfly" width="670" height="515">
+      <h1 class="hero-brand" lang="he" dir="rtl">עלית</h1>
+      <h2 class="hero-pronunciation">[a-leet]</h2>
+      <p class="hero-origin" lang="he" dir="rtl"><em>את עלית על כולנה</em> (משלי לא, כט)</p>
+      <p class="hero-translation"><em>You are elevated above them all</em></p>
+      <div class="hero-en">The Women’s Learning Program of Midrash Elyon</div>
+      <div class="hero-badge">Registration now open — Semester 1</div>
+      <div class="hero-line"></div>
+      <h2 class="hero-heading">The Next Chapter of Growth for the Women of Midrash Elyon</h2>
+      <p class="lede">Four Classes, Three Days a Week, One Powerful Program.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#register">Register now</a>
+        <a class="btn btn-ghost" href="#classes">See the classes</a>
+      </div>
+    </div>
+  </section>
+
+  <aside class="coming-soon-frame wrap" aria-label="Coming soon">
+    <h2>Coming Soon: Unveiling Our All New Women's Learning Center</h2>
+  </aside>
+
+  <!-- ABOUT -->
+  <section id="program">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">The Program</span></div>
+        <h2 class="program-intro">Introducing <span lang="he" dir="rtl">עלית</span></h2>
+        <p class="program-subtitle">Learning, at the pace of real life</p>
+        <p>Rooted in Torah, עלית is a learning program built for those who are reaching higher, who care about their growth and want to build a special future. There’s going through life, and then there’s owning that life. Join and see the difference.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-stat">
+          <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20c8 0 15-6 17-17-11 0-17 7-17 17Z"/><path d="M4 20c4-6 8-9 15-13"/></svg>
+          <div><h3>Rooted in Our Shul and Rabbi's Hashkafa</h3><p>Every class is shaped by shared Mesorah, taught with clarity and conveyed with no judgement</p></div>
+        </div>
+        <div class="about-stat">
+          <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+          <div><h3>Built for your week</h3><p>Choose at least two classes and shape a schedule that fits your life.</p></div>
+        </div>
+        <div class="about-stat">
+          <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9Z"/></svg>
+          <div><h3>A spa for the soul</h3><p>Unhurried, gracious, and personal — a space made to feel like yours.</p></div>
+        </div>
+        <div class="about-stat">
+          <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 3v6a3 3 0 0 0 6 0V3M7 3v18M20 3v18M20 3c-4 2-5 7-5 10h5"/></svg>
+          <div><h3 class="lunch-heading"><strong>Lunch will be served</strong></h3><p>Enjoy lunch before and after classes</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES -->
+  <section id="classes" class="tone-tint">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">The Classes</span></div>
+        <h2>Four Classes, Three Days a Week, One Powerful Program</h2>
+        <p>Register for at least two — mix and match the classes that fit where you are right now.</p>
+      </div>
+      <div class="class-list">
+        <div class="class-row">
+          <div class="idx">01</div>
+          <div class="name"><h3>LIFE</h3><p>so much in it, so much to understand, so much to do; simplified and highlighted by <span class="description-teacher">Rabbi David Haber</span></p></div>
+          <div class="teacher"><strong>Rabbi David Haber</strong></div>
+          <div class="when">Mondays<br>12:45 – 1:45 PM</div>
+        </div>
+        <div class="class-row">
+          <div class="idx">02</div>
+          <div class="name"><h3>MY SHABBAT</h3><p>the source of all blessing-Shabbat; the laws explained, and taught with practicality by <span class="description-teacher">Mrs Samantha Sasson</span></p></div>
+          <div class="teacher"><strong>Mrs. Samantha Sasson</strong></div>
+          <div class="when">Tuesdays<br>1:15 – 2:15 PM</div>
+        </div>
+        <div class="class-row">
+          <div class="idx">03</div>
+          <div class="name"><h3>HOME</h3><p>our epicenter, the place where we build our marriage and our family; navigated by the venerated <span class="description-teacher">Mrs Molly Haber</span></p></div>
+          <div class="teacher"><strong>Mrs. Molly Haber</strong></div>
+          <div class="when">Wednesdays<br>12:15 – 1:15 PM</div>
+        </div>
+        <div class="class-row">
+          <div class="idx">04</div>
+          <div class="name"><h3>MOMMY</h3><p>the greatest responsibility in the world; nurtured and guided with expertise by <span class="description-teacher">Mrs Rivka Tebele</span></p></div>
+          <div class="teacher"><strong>Mrs. Rivka Tebele</strong></div>
+          <div class="when">Wednesdays<br>1:30 – 2:15 PM</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMESTERS & YOM IYUN -->
+  <section id="schedule">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">The Year Ahead</span></div>
+        <h2>Two Semesters and Special Events</h2>
+        <p>Register below for Semester 1 — Semester 2 registration will open once Semester 1 is underway.</p>
+      </div>
+
+      <div class="semester-grid">
+        <div class="semester-card">
+          <div class="sem-badge open">Open for registration</div>
+          <h3>Semester 1</h3>
+          <p class="sem-meta">10-week program</p>
+          <a class="btn btn-primary" href="#register" style="margin-top:18px;">Register for Semester 1</a>
+        </div>
+        <div class="semester-card disabled">
+          <div class="sem-badge">Registration not yet open</div>
+          <h3>Semester 2</h3>
+          <p class="sem-meta">7-week program</p>
+          <span class="btn btn-ghost" style="margin-top:18px; opacity:0.6; cursor:default;" aria-disabled="true">Coming soon</span>
+        </div>
+      </div>
+
+      <div class="yomiyun-card">
+        <div class="eyebrow-row" style="margin-bottom: 10px;"><span class="stem"></span><span class="eyebrow">SPECIAL EVENT</span></div>
+        <h3>Yom Iyun — In Advance of Pesach</h3>
+        <p class="yi-sub">A special day of learning to prepare for the Yom Tov, covering:</p>
+        <ul class="yi-list">
+          <li>Journey through Magid</li>
+          <li>Majesty of Pesach</li>
+          <li>Laws of the Holiday</li>
+        </ul>
+      </div>
+      <div class="yomiyun-card">
+        <div class="eyebrow-row" style="margin-bottom: 10px;"><span class="stem"></span><span class="eyebrow">SPECIAL EVENT</span></div>
+        <h3>Grand Challah Bake</h3>
+      </div>
+      <div class="yomiyun-card">
+        <div class="eyebrow-row" style="margin-bottom: 10px;"><span class="stem"></span><span class="eyebrow">SPECIAL EVENT</span></div>
+        <h3>Hizuk Trip and Dinner</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="register" class="tone-tint">
+    <div class="wrap" style="max-width: 760px;">
+      <div class="section-head" style="margin: 0 auto 40px;">
+        <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">Registration</span></div>
+        <h2>Reserve your place — Semester 1</h2>
+        <p>This registration is for Semester 1. Fill in your details below, and you'll receive your finalized schedule by email in about 7 days.</p>
+        <p style="font-size: 0.86rem; color: var(--text-soft); margin-top: 14px;">Please note: registration conveys your <u>preferred</u> classes. Classes are subject to availability.</p>
+      </div>
+
+      <div class="form-shell">
+        <form id="regForm" novalidate>
+
+          <!-- Spam trap: leave empty. Real visitors never see it. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="fwebsite">Website</label>
+            <input type="text" id="fwebsite" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="field-grid">
+              <div class="field">
+                <label for="fname">Full name</label>
+                <input type="text" id="fname" name="fname" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="femail">Email address</label>
+                <input type="email" id="femail" name="femail" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="fphone">Phone number</label>
+                <input type="tel" id="fphone" name="fphone" required autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="fbirthday">Your birthday</label>
+                <input type="date" id="fbirthday" name="fbirthday" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend style="margin-bottom:8px;">Choose your classes</legend>
+            <input type="hidden" id="classCount" name="classCount" value="2">
+
+            <div class="conditional" id="rankSection" style="margin-top:0; padding-top:0;">
+              <p class="hint" style="margin-top: 2px;">Choose your classes, in order of priority — your top choice first. Minimum 2 classes.</p>
+              <div id="rankFields"></div>
+
+              <div class="conditional" id="backupSection">
+                <p class="hint" style="margin-top: 18px;">If one of your top choices isn't available, please rank your backup options below.</p>
+                <div id="backupFields"></div>
+              </div>
+
+              <p class="hint" id="autoBackupNote" style="display:none; margin-top: 18px;"></p>
+
+              <div class="fee-note" id="feeNote" style="margin-top: 18px;"></div>
+            </div>
+
+            <div class="field" style="margin-top:22px;">
+              <label for="classComments">Comments (optional)</label>
+              <textarea id="classComments" name="classComments" rows="4" placeholder="Share any comments about your class choices or schedule."></textarea>
+            </div>
+
+            <p class="hint">All classes are subject to availability.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>A few questions</legend>
+
+            <div class="field" style="margin-bottom:22px;">
+              <label>Did you sign up with a friend?</label>
+              <div class="radio-pill-row">
+                <label class="radio-pill"><input type="radio" name="withFriend" value="yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="withFriend" value="no"><span>No</span></label>
+              </div>
+              <div class="conditional" id="friendField">
+                <div class="field" style="margin-bottom:0;">
+                  <label for="friendName">Your friend's name</label>
+                  <input type="text" id="friendName" name="friendName">
+                </div>
+              </div>
+            </div>
+
+            <div class="field" style="margin-bottom:22px;">
+              <label>Are you single or married?</label>
+              <div class="radio-pill-row">
+                <label class="radio-pill"><input type="radio" name="marital" value="single"><span>Single</span></label>
+                <label class="radio-pill"><input type="radio" name="marital" value="married"><span>Married</span></label>
+              </div>
+            </div>
+
+            <div class="conditional" id="marriedFields">
+              <div class="field-grid">
+                <div class="field">
+                  <label for="fanniversary">Your anniversary</label>
+                  <input type="date" id="fanniversary" name="fanniversary">
+                </div>
+                <div class="field">
+                  <label for="fhemail">Husband's email address</label>
+                  <input type="email" id="fhemail" name="fhemail">
+                </div>
+                <div class="field">
+                  <label for="fhphone">Husband's phone number</label>
+                  <input type="tel" id="fhphone" name="fhphone" autocomplete="off">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Dedicate a class or week <span style="font-weight:400; color: var(--text-soft); font-size: 0.85rem;">(optional)</span></legend>
+            <div class="plan-options" id="planGroup" style="margin-bottom:22px;">
+              <label class="plan-opt">
+                <input type="radio" name="plan" value="none" checked>
+                <div class="po-title">Dedicate at a Later Time</div>
+                <div class="po-sub">Register now, decide later</div>
+              </label>
+              <label class="plan-opt">
+                <input type="radio" name="plan" value="class">
+                <div class="po-title">Dedicate a Class</div>
+                <div class="po-sub">$600 in addition to registration</div>
+              </label>
+              <label class="plan-opt">
+                <input type="radio" name="plan" value="week">
+                <div class="po-title">Dedicate a Week</div>
+                <div class="po-sub">$1,800 in addition to registration</div>
+              </label>
+            </div>
+            <div class="conditional" id="dedicationClassField">
+              <div class="field" style="max-width:360px;">
+                <label for="fdedicationclass">Which class would you like to dedicate?</label>
+                <select id="fdedicationclass" name="fdedicationclass">
+                  <option value="">Select a class</option>
+                  <option value="LIFE">LIFE</option>
+                  <option value="HOME">HOME</option>
+                  <option value="MY SHABBAT">MY SHABBAT</option>
+                  <option value="MOMMY">MOMMY</option>
+                </select>
+              </div>
+            </div>
+            <div class="conditional" id="dedicationInfoField">
+              <div class="field">
+                <label for="fdedicationinfo">Dedication information</label>
+                <textarea id="fdedicationinfo" name="fdedicationinfo" rows="4" maxlength="1500" placeholder="Please include the name(s), occasion, and wording you would like for your dedication."></textarea>
+              </div>
+            </div>
+            <div class="conditional" id="dedicationDateField">
+              <div class="field" style="max-width: 280px; margin-bottom: 0;">
+                <label for="fdonationdate">Date of dedication</label>
+                <input type="date" id="fdonationdate" name="fdonationdate">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="summary-box" id="liveSummary">Choose your classes and plan above to see your total.</div>
+
+          <div class="submit-row" style="margin-top:26px;">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Submit registration</button>
+            <span class="error-msg" id="formError" role="alert"></span>
+          </div>
+        </form>
+
+        <div class="confirm" id="confirmPanel" style="display:none;">
+          <svg class="leaf-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20c8 0 15-6 17-17-11 0-17 7-17 17Z"/><path d="M4 20c4-6 8-9 15-13"/></svg>
+          <h3>Your submission has been recorded, <span id="confirmName"></span></h3>
+          <p id="confirmNext"></p>
+          <p id="confirmEmailNote" style="display:none;"></p>
+          <div class="receipt" id="confirmReceipt"></div>
+          <p id="paymentNote" style="display:none;"></p>
+          <div id="payActions" style="display:none;">
+            <a class="btn btn-primary" id="payNowBtn" href="#">Continue to payment</a>
+            <p class="hint" id="payCountdown" style="margin:14px auto 0;"></p>
+          </div>
+          <p class="hint" style="margin:18px auto 20px;">You'll receive your finalized weekly schedule by email in about 7 days.</p>
+          <a class="btn btn-ghost" id="backTopBtn" href="#top">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="heb" lang="he" dir="rtl">עלית</div>
+  <p id="contactLine">Questions about registration? We're happy to help — reach out any time.</p>
+</footer>
+
+<script>
+(function () {
+  // ===================== SETTINGS — the lines you may need to change =====================
+  // 1) The web address of your Google script. Paste the one that ends in /exec.
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzJY_UwQ2TnbrxvXgfTaKsRcNlfIHVbQ0uRPbC4nk_G47yJhQ6bHEUYFc8n0HzXOlGa/exec';
+  // 2) Optional: an email address people can write to. Leave '' to keep the footer wording as it is.
+  const CONTACT_EMAIL = '';
+  // 3) Optional: a sentence about how/when to pay. Leave '' to show nothing.
+  const PAYMENT_NOTE = '';
+  // 4) The web address of the SECURE payment form people are sent to right after they register.
+  //    It must start with https://. Card details are typed into THAT form only — never into this page.
+  //    Leave '' until the payment form is ready: people will then be told we will contact them about payment.
+  const PAYMENT_FORM_URL = 'https://shulspace.org/midrash-elyon/form/rachels_place_1898_6';
+  // 5) How many seconds the confirmation stays on screen before moving on to the payment form.
+  const REDIRECT_SECONDS = 12;
+  // ======================================================================================================
+
+  console.info('עלית form loaded. Registrations will be sent to: ' + String(SHEET_URL).slice(0, 70) + '…');
+
+  const form = document.getElementById('regForm');
+  const classCount = document.getElementById('classCount');
+  const rankSection = document.getElementById('rankSection');
+  const rankFields = document.getElementById('rankFields');
+  const backupSection = document.getElementById('backupSection');
+  const backupFields = document.getElementById('backupFields');
+  const autoBackupNote = document.getElementById('autoBackupNote');
+  const friendField = document.getElementById('friendField');
+  const marriedFields = document.getElementById('marriedFields');
+  const liveSummary = document.getElementById('liveSummary');
+  const formError = document.getElementById('formError');
+  const confirmPanel = document.getElementById('confirmPanel');
+  const submitBtn = document.getElementById('submitBtn');
+
+  const PRICES = {
+    class: { label: 'Dedicate a Class', flat: 600 },
+    week:  { label: 'Dedicate a Week', flat: 1800 }
+  };
+
+  const REGISTRATION_FEE_PER_CLASS = 50;
+  const feeNote = document.getElementById('feeNote');
+
+  const CLASSES = [
+    { value: 'Life',    label: 'Life — Mon, 12:45–1:45 PM · Rabbi Haber' },
+    { value: 'MY SHABBAT', label: 'My Shabbat — Tue, 1:15–2:15 PM · Mrs. Sasson' },
+    { value: 'Home',    label: 'Home — Wed, 12:15–1:15 PM · Mrs. Haber' },
+    { value: 'Mommy',   label: 'Mommy — Wed, 1:30–2:15 PM · Mrs. Rivka Tebele' }
+  ];
+  const ORDINALS = ['', '1st', '2nd', '3rd', '4th'];
+
+  // Optional footer contact line and payment note (only shown if filled in above).
+  if (CONTACT_EMAIL) {
+    const line = document.getElementById('contactLine');
+    line.textContent = 'Questions about registration? Email us at ';
+    const a = document.createElement('a');
+    a.href = 'mailto:' + CONTACT_EMAIL; a.textContent = CONTACT_EMAIL;
+    line.appendChild(a);
+  }
+
+  function selectedValues(container) {
+    return Array.from(container.querySelectorAll('select')).map(s => s.value).filter(Boolean);
+  }
+
+  function selectedClasses() {
+    return selectedValues(rankFields);
+  }
+
+  function selectedBackups() {
+    return selectedValues(backupFields);
+  }
+
+  function donationTotal(planValue) {
+    return PRICES[planValue].flat;
+  }
+
+  function updateFeeNote() {
+    const n = parseInt(classCount.value, 10);
+    if (!n) {
+      feeNote.innerHTML = '';
+      return;
+    }
+    const total = n * REGISTRATION_FEE_PER_CLASS;
+    feeNote.innerHTML = 'Registration fee: <strong>$' + REGISTRATION_FEE_PER_CLASS + ' per class</strong> — <strong>$' + total.toLocaleString() + ' total</strong> for ' + n + ' class' + (n > 1 ? 'es' : '') + '.';
+  }
+
+  function refreshSelectOptions(container, optionsList) {
+    const selects = Array.from(container.querySelectorAll('select'));
+    const chosen = selects.map(s => s.value).filter(Boolean);
+    selects.forEach(sel => {
+      const current = sel.value;
+      sel.innerHTML = '<option value="" disabled' + (current ? '' : ' selected') + '>Select a class</option>' +
+        optionsList.map(c => {
+          const isDisabled = chosen.includes(c.value) && c.value !== current;
+          return '<option value="' + c.value + '"' + (isDisabled ? ' disabled' : '') + (c.value === current ? ' selected' : '') + '>' + c.label + '</option>';
+        }).join('');
+    });
+  }
+
+  function buildRankSelects(container, numSelects, optionsList, labelPrefix) {
+    container.innerHTML = '';
+    for (let i = 1; i <= numSelects; i++) {
+      const field = document.createElement('div');
+      field.className = 'field';
+      field.style.marginBottom = '14px';
+      const label = document.createElement('label');
+      label.textContent = (labelPrefix ? labelPrefix + ' ' : '') + ORDINALS[i] + ' choice';
+      const select = document.createElement('select');
+      select.required = true;
+      field.appendChild(label);
+      field.appendChild(select);
+      container.appendChild(field);
+    }
+    refreshSelectOptions(container, optionsList);
+  }
+
+  function updateBackupSection() {
+    const requestedCount = parseInt(classCount.value, 10);
+    const primary = selectedClasses();
+    autoBackupNote.style.display = 'none';
+
+    if (!requestedCount || primary.length !== requestedCount) {
+      backupFields.innerHTML = '';
+      backupSection.classList.remove('show');
+      return;
+    }
+
+    const remaining = CLASSES.filter(c => !primary.includes(c.value));
+
+    if (remaining.length > 1) {
+      buildRankSelects(backupFields, remaining.length, remaining, 'Backup');
+      backupSection.classList.add('show');
+    } else {
+      backupFields.innerHTML = '';
+      backupSection.classList.remove('show');
+      if (remaining.length === 1) {
+        autoBackupNote.textContent = 'Your automatic backup option: ' + remaining[0].value + '.';
+        autoBackupNote.style.display = 'block';
+      }
+    }
+  }
+
+  function updateSummary() {
+    const classes = selectedClasses();
+    const plan = form.querySelector('input[name="plan"]:checked');
+
+    if (classes.length === 0) {
+      liveSummary.innerHTML = 'Choose your classes above to see a summary.';
+      return;
+    }
+    const ranked = classes.map((c, i) => (i + 1) + '. ' + c).join(', ');
+    const fee = classes.length * REGISTRATION_FEE_PER_CLASS;
+    let text = '<strong>' + ranked + '</strong> &nbsp;·&nbsp; registration fee: <strong>$' + fee.toLocaleString() + '</strong>';
+    const backups = selectedBackups();
+    if (backups.length) {
+      text += ' &nbsp;·&nbsp; backups: ' + backups.map((c, i) => (i + 1) + '. ' + c).join(', ');
+    }
+    if (plan && plan.value !== 'none') {
+      const p = PRICES[plan.value];
+      const total = donationTotal(plan.value, classes.length);
+      text += ' &nbsp;·&nbsp; <strong>' + p.label + '</strong> — $' + total.toLocaleString();
+      if (plan.value === 'class' && form.fdedicationclass.value) text += ' (' + form.fdedicationclass.value + ')';
+    } else {
+      text += ' &nbsp;·&nbsp; dedicate at a later time';
+    }
+    const dedication = plan && plan.value !== 'none' ? donationTotal(plan.value) : 0;
+    text += ' &nbsp;·&nbsp; <strong>Total: $' + (fee + dedication).toLocaleString() + '</strong>';
+    liveSummary.innerHTML = text;
+  }
+
+  classCount.addEventListener('change', () => {
+    const n = parseInt(classCount.value, 10);
+    if (n) {
+      buildRankSelects(rankFields, n, CLASSES, '');
+      rankSection.classList.add('show');
+    } else {
+      rankFields.innerHTML = '';
+      rankSection.classList.remove('show');
+    }
+    updateBackupSection();
+    updateFeeNote();
+    updateSummary();
+  });
+
+  rankFields.addEventListener('change', () => {
+    refreshSelectOptions(rankFields, CLASSES);
+    updateBackupSection();
+    updateSummary();
+  });
+
+  backupFields.addEventListener('change', () => {
+    const requestedCount = parseInt(classCount.value, 10);
+    const primary = selectedClasses();
+    const remaining = CLASSES.filter(c => !primary.includes(c.value));
+    refreshSelectOptions(backupFields, remaining);
+    updateSummary();
+  });
+
+  const dedicationClassField = document.getElementById('dedicationClassField');
+  const dedicationClass = document.getElementById('fdedicationclass');
+  dedicationClass.addEventListener('change', updateSummary);
+  const dedicationInfoField = document.getElementById('dedicationInfoField');
+  const dedicationInfo = document.getElementById('fdedicationinfo');
+  const dedicationDateField = document.getElementById('dedicationDateField');
+  form.querySelectorAll('input[name="plan"]').forEach(el => {
+    el.addEventListener('change', () => {
+      const plan = form.querySelector('input[name="plan"]:checked');
+      dedicationDateField.classList.toggle('show', !!plan && plan.value !== 'none');
+      dedicationInfoField.classList.toggle('show', !!plan && plan.value !== 'none');
+      dedicationInfo.required = !!plan && plan.value !== 'none';
+      dedicationClassField.classList.toggle('show', !!plan && plan.value === 'class');
+      dedicationClass.required = !!plan && plan.value === 'class';
+      updateSummary();
+    });
+  });
+
+  form.querySelectorAll('input[name="withFriend"]').forEach(el => {
+    el.addEventListener('change', () => {
+      const show = el.value === 'yes' && el.checked;
+      friendField.classList.toggle('show', form.querySelector('input[name="withFriend"]:checked').value === 'yes');
+    });
+  });
+
+  form.querySelectorAll('input[name="marital"]').forEach(el => {
+    el.addEventListener('change', () => {
+      marriedFields.classList.toggle('show', form.querySelector('input[name="marital"]:checked').value === 'married');
+    });
+  });
+
+  // Sends the registration to the Google script and WAITS for its answer.
+  // Throws if the script can't be reached or doesn't say "success".
+  async function sendRegistration(payload) {
+    if (!SHEET_URL || SHEET_URL.indexOf('PASTE_') === 0) {
+      const err = new Error('The registration address has not been set up yet.');
+      err.setup = true;
+      throw err;
+    }
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 25000);
+    try {
+      // The details travel in the body of a POST, not in the web address.
+      const res = await fetch(SHEET_URL, { method: 'POST', body: new URLSearchParams(payload), signal: controller.signal });
+      if (!res.ok) throw new Error('The registration service answered with an error (' + res.status + ').');
+      const data = await res.json();
+      if (!data || data.status !== 'success') throw new Error((data && data.message) || 'The registration was not accepted.');
+      return data;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  // The secure payment form's address, only if it is set and starts with https://
+  function paymentUrl() {
+    if (!PAYMENT_FORM_URL) return '';
+    if (!/^https:\/\//i.test(PAYMENT_FORM_URL)) {
+      console.warn('PAYMENT_FORM_URL must start with https:// — ignoring it.');
+      return '';
+    }
+    return PAYMENT_FORM_URL;
+  }
+
+  // Shows the "next step" wording and, when a payment form is set up, moves people on to it.
+  function showNextSteps(url, emailed, email) {
+    const next = document.getElementById('confirmNext');
+    const emailNote = document.getElementById('confirmEmailNote');
+    const payActions = document.getElementById('payActions');
+    const backTop = document.getElementById('backTopBtn');
+    next.textContent = url
+      ? 'Please complete the payment information on the next form. You will only be charged once we have completed class registration.'
+      : 'We will be in touch with you about payment. You will only be charged once we have completed class registration.';
+    if (emailed) {
+      emailNote.textContent = 'A confirmation email is on its way to ' + email + '.';
+      emailNote.style.display = 'block';
+    }
+    if (!url) return;
+    backTop.style.display = 'none';
+    const btn = document.getElementById('payNowBtn');
+    const note = document.getElementById('payCountdown');
+    btn.href = url;
+    payActions.style.display = 'block';
+    let left = Math.max(1, Math.round(Number(REDIRECT_SECONDS) || 12));
+    let timer = null;
+    function paint() {
+      note.textContent = 'Taking you to the payment form in ' + left + ' second' + (left === 1 ? '' : 's') + '… ';
+      const stay = document.createElement('a');
+      stay.href = '#'; stay.textContent = 'Stay on this page';
+      stay.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        clearInterval(timer);
+        note.textContent = 'When you are ready, use the button above to continue to the payment form.';
+      });
+      note.appendChild(stay);
+    }
+    paint();
+    timer = setInterval(function () {
+      left -= 1;
+      if (left <= 0) { clearInterval(timer); window.location.href = url; return; }
+      paint();
+    }, 1000);
+  }
+
+  let sending = false;
+
+  classCount.dispatchEvent(new Event('change'));
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (sending) return;
+    formError.textContent = '';
+
+    const classes = selectedClasses();
+    const marital = form.querySelector('input[name="marital"]:checked');
+    const withFriend = form.querySelector('input[name="withFriend"]:checked');
+    const plan = form.querySelector('input[name="plan"]:checked');
+    const donationDate = form.fdonationdate.value;
+    const name = form.fname.value.trim();
+    const email = form.femail.value.trim();
+    if (!form.femail.checkValidity()) {
+      formError.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    const phone = form.fphone.value.trim();
+    const birthday = form.fbirthday.value;
+
+    if (!name || !email || !phone || !birthday) {
+      formError.textContent = 'Please fill in your name, email, phone, and birthday.';
+      return;
+    }
+    const requestedCount = parseInt(classCount.value, 10);
+    if (!requestedCount) {
+      formError.textContent = 'Please select how many classes you\'d like to attend.';
+      return;
+    }
+    if (classes.length < requestedCount) {
+      formError.textContent = 'Please rank all ' + requestedCount + ' of your class choices.';
+      return;
+    }
+    const backups = selectedBackups();
+    const backupSlots = backupFields.querySelectorAll('select').length;
+    if (backupSlots > 0 && backups.length < backupSlots) {
+      formError.textContent = 'Please rank your backup options, in case a top choice isn\'t available.';
+      return;
+    }
+    if (!withFriend) {
+      formError.textContent = 'Please let us know if you signed up with a friend.';
+      return;
+    }
+    if (withFriend.value === 'yes' && !form.friendName.value.trim()) {
+      formError.textContent = "Please tell us your friend's name.";
+      return;
+    }
+    if (!marital) {
+      formError.textContent = 'Please let us know if you are single or married.';
+      return;
+    }
+    if (marital.value === 'married' && (!form.fanniversary.value || !form.fhemail.value.trim())) {
+      formError.textContent = "Please fill in your anniversary and your husband's email address.";
+      return;
+    }
+    const hasDedication = plan && plan.value !== 'none';
+    if (plan.value === 'class' && !dedicationClass.value) {
+      formError.textContent = 'Please select which class you would like to dedicate.';
+      return;
+    }
+    if (hasDedication && !dedicationInfo.value.trim()) {
+      formError.textContent = 'Please enter your dedication information.';
+      return;
+    }
+    if (hasDedication && !donationDate) {
+      formError.textContent = 'Please let us know the date of your dedication (or select "Dedicate at a Later Time").';
+      return;
+    }
+
+    let dedicationRows = '<div><span>Dedication</span><span>Will decide later</span></div>';
+    if (hasDedication) {
+      const p = PRICES[plan.value];
+      const total = donationTotal(plan.value, classes.length);
+      dedicationRows =
+        '<div><span>Dedication</span><span>' + p.label + '</span></div>' +
+        (plan.value === 'class' ? '<div><span>Class to dedicate</span><span>' + dedicationClass.value + '</span></div>' : '') +
+        '<div><span>Dedication total</span><span>$' + total.toLocaleString() + '</span></div>' +
+        '<div><span>Dedication information</span><span>' + dedicationInfo.value.trim().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])) + '</span></div>' +
+        '<div><span>Date of dedication</span><span>' + donationDate + '</span></div>';
+    }
+
+    const remainingAfterPrimary = CLASSES.filter(c => !classes.includes(c.value)).map(c => c.value);
+    const backupList = backups.length ? backups : (remainingAfterPrimary.length === 1 ? remainingAfterPrimary : []);
+    const backupText = backupList.length ? backupList.map((c, i) => (i + 1) + '. ' + c).join(', ') : '';
+    const registrationFee = classes.length * REGISTRATION_FEE_PER_CLASS;
+
+    const dedicationAmount = hasDedication ? donationTotal(plan.value) : 0;
+    const totalAmount = registrationFee + dedicationAmount;
+
+    const payload = {
+      name: name,
+      email: email,
+      phone: phone,
+      birthday: birthday,
+      classes: classes.map((c, i) => (i + 1) + '. ' + c).join(', '),
+      backupClasses: backupText,
+      comments: form.classComments.value.trim(),
+      registrationFee: registrationFee,
+      dedicationAmount: dedicationAmount,
+      totalAmount: totalAmount,
+      withFriend: withFriend.value,
+      friendName: withFriend.value === 'yes' ? form.friendName.value.trim() : '',
+      marital: marital.value,
+      anniversary: marital.value === 'married' ? form.fanniversary.value : '',
+      husbandEmail: marital.value === 'married' ? form.fhemail.value.trim() : '',
+      husbandPhone: marital.value === 'married' ? form.fhphone.value.trim() : '',
+      dedicationPlan: hasDedication ? PRICES[plan.value].label : 'Dedicate at a later time',
+      dedicationInformation: hasDedication ? dedicationInfo.value.trim() : '',
+      dedicationClass: plan.value === 'class' ? dedicationClass.value : '',
+      dedicationDate: hasDedication ? donationDate : '',
+      website: form.website.value   // spam trap: stays empty for real people
+    };
+
+    // Send it, and only show "You're registered" once the sheet has confirmed it saved.
+    sending = true;
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+    let result = null;
+    try {
+      result = await sendRegistration(payload);
+    } catch (err) {
+      console.error('Registration was not saved:', err);
+      formError.textContent = err.setup
+        ? 'This form is not connected to the registration sheet yet. Please let us know so we can fix it.'
+        : 'We couldn\'t save your registration just now. Please check your connection and try again — nothing has been lost, your answers are still here.';
+      sending = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+      return;
+    }
+    sending = false;
+
+    document.getElementById('confirmName').textContent = name.split(' ')[0];
+    document.getElementById('confirmReceipt').innerHTML =
+      '<div><span>Classes (ranked)</span><span>' + classes.map((c, i) => (i + 1) + '. ' + c).join(', ') + '</span></div>' +
+      (backupText ? '<div><span>Backup options</span><span>' + backupText + '</span></div>' : '') +
+      '<div><span>Registration fee</span><span>$' + registrationFee.toLocaleString() + '</span></div>' +
+      dedicationRows +
+      '<div><span>Total</span><span>$' + totalAmount.toLocaleString() + '</span></div>' +
+      '<div><span>Email on file</span><span>' + email.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])) + '</span></div>';
+
+    if (PAYMENT_NOTE) {
+      const pn = document.getElementById('paymentNote');
+      pn.textContent = PAYMENT_NOTE;
+      pn.style.display = 'block';
+    }
+
+    form.style.display = 'none';
+    confirmPanel.style.display = 'block';
+    confirmPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    showNextSteps(paymentUrl(), !!(result && result.emailed), email);
+  });
+})();
+</script>
+
+</body>
+</html>
