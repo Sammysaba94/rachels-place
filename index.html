@@ -583,7 +583,7 @@
       <div class="section-head" style="margin: 0 auto 40px;">
         <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">Registration</span></div>
         <h2>Reserve your place — Semester 1</h2>
-        <p>This registration is for Semester 1. Fill in your details below, and you'll receive your finalized schedule by email in about 7 days.</p>
+        <p>This registration is for Semester 1. Fill in your details below, and you'll receive your finalized schedule by email in a timely manner.</p>
         <p style="font-size: 0.86rem; color: var(--text-soft); margin-top: 14px;">Please note: registration conveys your <u>preferred</u> classes. Classes are subject to availability.</p>
       </div>
 
@@ -615,19 +615,29 @@
                 <label for="fbirthday">Your birthday</label>
                 <input type="date" id="fbirthday" name="fbirthday" required>
               </div>
+              <div class="field" style="grid-column:1 / -1;">
+                <label for="faddress">Home address</label>
+                <input type="text" id="faddress" name="faddress" autocomplete="street-address" placeholder="Street address, apartment, city, state, ZIP code">
+              </div>
             </div>
           </fieldset>
 
           <fieldset>
             <legend style="margin-bottom:8px;">Choose your classes</legend>
-            <input type="hidden" id="classCount" name="classCount" value="2">
+            <div class="field" style="margin-bottom:14px;">
+              <label for="classCount">How many classes would you like to sign up for?</label>
+              <select id="classCount" name="classCount" required>
+                <option value="1">1 class</option>
+                <option value="2" selected>2 classes</option>
+              </select>
+            </div>
 
             <div class="conditional" id="rankSection" style="margin-top:0; padding-top:0;">
-              <p class="hint" style="margin-top: 2px;">Choose your classes, in order of priority — your top choice first. Minimum 2 classes.</p>
+              <p class="hint" id="classPriorityHint" style="margin-top: 2px;">Choose one or two classes, in order of priority — your top choice first.</p>
               <div id="rankFields"></div>
 
               <div class="conditional" id="backupSection">
-                <p class="hint" style="margin-top: 18px;">If one of your top choices isn't available, please rank your backup options below.</p>
+                <p class="hint" id="backupPriorityHint" style="margin-top: 18px;">If one of your top choices isn't available, please rank your backup options below.</p>
                 <div id="backupFields"></div>
               </div>
 
@@ -751,7 +761,7 @@
             <a class="btn btn-primary" id="payNowBtn" href="#">Continue to payment</a>
             <p class="hint" id="payCountdown" style="margin:14px auto 0;"></p>
           </div>
-          <p class="hint" style="margin:18px auto 20px;">You'll receive your finalized weekly schedule by email in about 7 days.</p>
+          <p class="hint" style="margin:18px auto 20px;">You'll receive your finalized weekly schedule by email in a timely manner.</p>
           <a class="btn btn-ghost" id="backTopBtn" href="#top">Back to top</a>
         </div>
       </div>
@@ -935,6 +945,10 @@
 
   classCount.addEventListener('change', () => {
     const n = parseInt(classCount.value, 10);
+    document.getElementById('classPriorityHint').hidden = n === 1;
+    document.getElementById('backupPriorityHint').textContent = n === 1
+      ? "If your top choices isn't available, please rank your backup options below."
+      : "If one of your top choices isn't available, please rank your backup options below.";
     if (n) {
       buildRankSelects(rankFields, n, CLASSES, '');
       rankSection.classList.add('show');
@@ -1160,6 +1174,7 @@
       name: name,
       email: email,
       phone: phone,
+      homeAddress: form.faddress.value.trim(),
       birthday: birthday,
       classes: classes.map((c, i) => (i + 1) + '. ' + c).join(', '),
       backupClasses: backupText,
