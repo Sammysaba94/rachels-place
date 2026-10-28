@@ -468,7 +468,7 @@
       <div class="hero-badge">Registration now open — Semester 1</div>
       <div class="hero-line"></div>
       <h2 class="hero-heading">The Next Chapter of Growth for the Women of Midrash Elyon</h2>
-      <p class="lede">Four Classes, Three Days a Week, One Powerful Program.</p>
+      <p class="lede">Four classes to choose from, Three days a week, One powerful program</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#register">Register now</a>
         <a class="btn btn-ghost" href="#classes">See the classes</a>
@@ -513,8 +513,8 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">The Classes</span></div>
-        <h2>Four Classes, Three Days a Week, One Powerful Program</h2>
-        <p>Register for at least two — mix and match the classes that fit where you are right now.</p>
+        <h2>Four classes to choose from, Three days a week, One powerful program</h2>
+        <p>Choose from the class or classes that fit your schedule and interests</p>
       </div>
       <div class="class-list">
         <div class="class-row">
@@ -597,7 +597,7 @@
         <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">Registration</span></div>
         <h2>Reserve your place — Semester 1</h2>
         <p>This registration is for Semester 1. Fill in your details below, and you'll receive your finalized schedule by email in a timely manner.</p>
-        <p style="font-size: 0.86rem; color: var(--text-soft); margin-top: 14px;">Please note: registration conveys your <u>preferred</u> classes. Classes are subject to availability.</p>
+        <p style="font-size: 0.86rem; font-weight: 700; color: var(--text-soft); margin-top: 14px;">Please note: registration conveys your <u>preferred</u> classes. Classes are subject to availability.</p>
       </div>
 
       <div class="form-shell">
@@ -870,7 +870,7 @@
       return;
     }
     const total = n * REGISTRATION_FEE_PER_CLASS;
-    feeNote.innerHTML = 'Registration fee: <strong>$' + REGISTRATION_FEE_PER_CLASS + ' per class</strong> — <strong>$' + total.toLocaleString() + ' total</strong> for ' + n + ' class' + (n > 1 ? 'es' : '') + '.';
+    feeNote.innerHTML = 'Registration fee: <strong>$' + REGISTRATION_FEE_PER_CLASS + ' per class</strong> — <strong>$' + total.toLocaleString() + ' total</strong> for ' + n + ' class' + (n > 1 ? 'es' : '') + '.<br><span>To be charged upon registration acceptance</span>';
   }
 
   function refreshSelectOptions(container, optionsList) {
