@@ -353,8 +353,26 @@
   /* confirmation */
   .confirm { text-align: center; padding: 30px 10px; }
   .confirm .leaf-big { width: 48px; height: 48px; color: var(--accent); margin-bottom: 18px; }
-  .confirm h3 { font-size: 1.7rem; margin-bottom: 10px; }
+  .confirm h3 { font-size: clamp(1.8rem, 4vw, 2.35rem); line-height: 1.15; margin-bottom: 18px; }
   .confirm p { color: var(--text-soft); max-width: 420px; margin: 0 auto 22px; }
+  .confirm .next-step-alert {
+    max-width: 680px; margin: 0 auto 28px; padding: 26px 28px;
+    background: #fff2d6; border: 3px solid #b66b16; border-radius: 8px;
+    color: #492b0c; box-shadow: 0 8px 24px rgba(73, 43, 12, 0.12);
+  }
+  .confirm .next-step-alert .alert-kicker {
+    display: block; margin: 0 0 10px; color: #8a4308;
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem); font-weight: 800;
+    letter-spacing: .07em; text-transform: uppercase;
+  }
+  .confirm .next-step-alert #confirmNext {
+    max-width: none; margin: 0; color: #492b0c;
+    font-size: clamp(1.15rem, 2.7vw, 1.45rem); line-height: 1.45; font-weight: 700;
+  }
+  .confirm .next-step-alert .alert-reminder {
+    display: block; margin-top: 12px; font-size: 1.02rem; line-height: 1.45; font-weight: 600;
+  }
+  @media (max-width: 600px) { .confirm .next-step-alert { padding: 21px 17px; } }
   .confirm .receipt {
     text-align: left; max-width: 420px; margin: 0 auto 26px; border-top: 1px solid var(--line-color); padding-top: 18px;
   }
@@ -768,7 +786,11 @@
         <div class="confirm" id="confirmPanel" style="display:none;">
           <svg class="leaf-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20c8 0 15-6 17-17-11 0-17 7-17 17Z"/><path d="M4 20c4-6 8-9 15-13"/></svg>
           <h3>Your submission has been recorded, <span id="confirmName"></span></h3>
-          <p id="confirmNext"></p>
+          <div class="next-step-alert" role="alert" aria-live="assertive">
+            <span class="alert-kicker">Action required — enrollment is not complete</span>
+            <p id="confirmNext"></p>
+            <span class="alert-reminder">You MUST submit the payment information on the next page to finalize your enrollment. Your registration is not complete until you do.</span>
+          </div>
           <p id="confirmEmailNote" style="display:none;"></p>
           <div class="receipt" id="confirmReceipt"></div>
           <p id="paymentNote" style="display:none;"></p>
@@ -804,7 +826,7 @@
   //    Leave '' until the payment form is ready: people will then be told we will contact them about payment.
   const PAYMENT_FORM_URL = 'https://shulspace.org/midrash-elyon/form/rachels_place_1898_6';
   // 5) How many seconds the confirmation stays on screen before moving on to the payment form.
-  const REDIRECT_SECONDS = 12;
+  const REDIRECT_SECONDS = 6;
   // ======================================================================================================
 
   console.info('עלית form loaded. Registrations will be sent to: ' + String(SHEET_URL).slice(0, 70) + '…');
@@ -1072,7 +1094,7 @@
     const note = document.getElementById('payCountdown');
     btn.href = url;
     payActions.style.display = 'block';
-    let left = Math.max(1, Math.round(Number(REDIRECT_SECONDS) || 12));
+    let left = Math.max(1, Math.round(Number(REDIRECT_SECONDS) || 6));
     let timer = null;
     function paint() {
       note.textContent = 'Taking you to the payment form in ' + left + ' second' + (left === 1 ? '' : 's') + '… ';
