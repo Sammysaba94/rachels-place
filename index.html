@@ -214,26 +214,26 @@
     .class-row .teacher, .class-row .when { grid-column: 2; text-align: left; }
   }
 
-  /* ---------- SEMESTERS ---------- */
-  .semester-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 44px; }
-  .semester-card {
+  /* ---------- SEASONS ---------- */
+  .season-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 44px; }
+  .season-card {
     background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 4px;
     padding: 32px; text-align: center;
   }
-  .semester-card h3 { font-size: 1.5rem; font-weight: 600; margin: 6px 0 4px; }
-  .semester-card .sem-meta { color: var(--text-soft); font-size: 0.95rem; margin: 0; }
+  .season-card h3 { font-size: 1.5rem; font-weight: 600; margin: 6px 0 4px; }
+  .season-card .sem-meta { color: var(--text-soft); font-size: 0.95rem; margin: 0; }
   .sem-badge {
     display: inline-block; font-size: 0.72rem; letter-spacing: 0.05em;
     padding: 5px 14px; border-radius: 20px; margin-bottom: 4px;
     background: var(--bg-tint); color: var(--text-soft); border: 1px solid var(--line-color);
   }
   .sem-badge.open { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-deep); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
-  .semester-card.disabled {
+  .season-card.disabled {
     filter: grayscale(1);
     opacity: 0.6;
     background: var(--bg-tint);
   }
-  @media (max-width: 720px) { .semester-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 720px) { .season-grid { grid-template-columns: 1fr; } }
 
   .yomiyun-card {
     background: var(--bg-panel); border: 1px solid var(--line-color); border-radius: 4px;
@@ -353,26 +353,8 @@
   /* confirmation */
   .confirm { text-align: center; padding: 30px 10px; }
   .confirm .leaf-big { width: 48px; height: 48px; color: var(--accent); margin-bottom: 18px; }
-  .confirm h3 { font-size: clamp(1.8rem, 4vw, 2.35rem); line-height: 1.15; margin-bottom: 18px; }
+  .confirm h3 { font-size: 1.7rem; margin-bottom: 10px; }
   .confirm p { color: var(--text-soft); max-width: 420px; margin: 0 auto 22px; }
-  .confirm .next-step-alert {
-    max-width: 680px; margin: 0 auto 28px; padding: 26px 28px;
-    background: #fff2d6; border: 3px solid #b66b16; border-radius: 8px;
-    color: #492b0c; box-shadow: 0 8px 24px rgba(73, 43, 12, 0.12);
-  }
-  .confirm .next-step-alert .alert-kicker {
-    display: block; margin: 0 0 10px; color: #8a4308;
-    font-size: clamp(1.05rem, 2.5vw, 1.25rem); font-weight: 800;
-    letter-spacing: .07em; text-transform: uppercase;
-  }
-  .confirm .next-step-alert #confirmNext {
-    max-width: none; margin: 0; color: #492b0c;
-    font-size: clamp(1.15rem, 2.7vw, 1.45rem); line-height: 1.45; font-weight: 700;
-  }
-  .confirm .next-step-alert .alert-reminder {
-    display: block; margin-top: 12px; font-size: 1.02rem; line-height: 1.45; font-weight: 600;
-  }
-  @media (max-width: 600px) { .confirm .next-step-alert { padding: 21px 17px; } }
   .confirm .receipt {
     text-align: left; max-width: 420px; margin: 0 auto 26px; border-top: 1px solid var(--line-color); padding-top: 18px;
   }
@@ -483,7 +465,7 @@
       <h1 class="hero-center-title">RACHEL'S LEARNING CENTER</h1>
       <p class="hero-center-memory"><span>In Memory of</span> <span>Rachel Haber Cohen A&quot;H</span></p>
       <div class="hero-en">The Women’s Learning Program of Midrash Elyon</div>
-      <div class="hero-badge">Registration now open — Semester 1</div>
+      <div class="hero-badge">Registration now open — Season 1</div>
       <div class="hero-line"></div>
       <h2 class="hero-heading">The Next Chapter of Growth for the Women of Midrash Elyon</h2>
       <p class="lede">Four classes to choose from, Three days a week, One powerful program</p>
@@ -563,25 +545,25 @@
     </div>
   </section>
 
-  <!-- SEMESTERS & YOM IYUN -->
+  <!-- SEASONS & YOM IYUN -->
   <section id="schedule">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">The Year Ahead</span></div>
-        <h2>Two Semesters and Special Events</h2>
-        <p>Register below for Semester 1 — Semester 2 registration will open once Semester 1 is underway.</p>
+        <h2>Two Seasons and Special Events</h2>
+        <p>Register below for Season 1 — Season 2 registration will open once Season 1 is underway.</p>
       </div>
 
-      <div class="semester-grid">
-        <div class="semester-card">
+      <div class="season-grid">
+        <div class="season-card">
           <div class="sem-badge open">Open for registration</div>
-          <h3>Semester 1</h3>
+          <h3>Season 1</h3>
           <p class="sem-meta">10-week program</p>
-          <a class="btn btn-primary" href="#register" style="margin-top:18px;">Register for Semester 1</a>
+          <a class="btn btn-primary" href="#register" style="margin-top:18px;">Register for Season 1</a>
         </div>
-        <div class="semester-card disabled">
+        <div class="season-card disabled">
           <div class="sem-badge">Registration not yet open</div>
-          <h3>Semester 2</h3>
+          <h3>Season 2</h3>
           <p class="sem-meta">7-week program</p>
           <span class="btn btn-ghost" style="margin-top:18px; opacity:0.6; cursor:default;" aria-disabled="true">Coming soon</span>
         </div>
@@ -613,8 +595,8 @@
     <div class="wrap" style="max-width: 760px;">
       <div class="section-head" style="margin: 0 auto 40px;">
         <div class="eyebrow-row"><span class="stem"></span><span class="eyebrow">Registration</span></div>
-        <h2>Reserve your place — Semester 1</h2>
-        <p>This registration is for Semester 1. Fill in your details below, and you'll receive your finalized schedule by email in a timely manner.</p>
+        <h2>Reserve your place — Season 1</h2>
+        <p>This registration is for Season 1. Fill in your details below, and you'll receive your finalized schedule by email in a timely manner.</p>
         <p style="font-size: 0.86rem; font-weight: 700; color: var(--text-soft); margin-top: 14px;">Please note: registration conveys your <u>preferred</u> classes. Classes are subject to availability.</p>
       </div>
 
@@ -786,11 +768,7 @@
         <div class="confirm" id="confirmPanel" style="display:none;">
           <svg class="leaf-big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20c8 0 15-6 17-17-11 0-17 7-17 17Z"/><path d="M4 20c4-6 8-9 15-13"/></svg>
           <h3>Your submission has been recorded, <span id="confirmName"></span></h3>
-          <div class="next-step-alert" role="alert" aria-live="assertive">
-            <span class="alert-kicker">Action required — enrollment is not complete</span>
-            <p id="confirmNext"></p>
-            <span class="alert-reminder">You MUST submit the payment information on the next page to finalize your enrollment. Your registration is not complete until you do.</span>
-          </div>
+          <p id="confirmNext"></p>
           <p id="confirmEmailNote" style="display:none;"></p>
           <div class="receipt" id="confirmReceipt"></div>
           <p id="paymentNote" style="display:none;"></p>
@@ -826,7 +804,7 @@
   //    Leave '' until the payment form is ready: people will then be told we will contact them about payment.
   const PAYMENT_FORM_URL = 'https://shulspace.org/midrash-elyon/form/rachels_place_1898_6';
   // 5) How many seconds the confirmation stays on screen before moving on to the payment form.
-  const REDIRECT_SECONDS = 6;
+  const REDIRECT_SECONDS = 12;
   // ======================================================================================================
 
   console.info('עלית form loaded. Registrations will be sent to: ' + String(SHEET_URL).slice(0, 70) + '…');
@@ -1094,7 +1072,7 @@
     const note = document.getElementById('payCountdown');
     btn.href = url;
     payActions.style.display = 'block';
-    let left = Math.max(1, Math.round(Number(REDIRECT_SECONDS) || 6));
+    let left = Math.max(1, Math.round(Number(REDIRECT_SECONDS) || 12));
     let timer = null;
     function paint() {
       note.textContent = 'Taking you to the payment form in ' + left + ' second' + (left === 1 ? '' : 's') + '… ';
